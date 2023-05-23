@@ -122,8 +122,10 @@ AFRAME.registerComponent('registerevents', {
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
+		      id="baseMarker" registerevents
             >
-                <a-video
+		    <a-entity id="follower" active="0">
+                <a-video id="followerPlane"
                     src="#vid"
                     scale="1 1 1"
                     position="0 0.1 0"
@@ -132,6 +134,7 @@ AFRAME.registerComponent('registerevents', {
                     gesture-handler
                 ></a-video>
             </a-marker>
+		    </a-entity>
 
             <a-entity camera></a-entity>
         </a-scene>
